@@ -8,5 +8,5 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 FROM openjdk:17-alpine
 EXPOSE 57963
-COPY --from=build /home/app/target/evaluacionmicroserviciosreativos-0.0.1-SNAPSHOT.jar app/app.jar
+COPY --from=build /home/app/target/repasomicroservicio-0.0.1-SNAPSHOT.jar app/app.jar
 ENTRYPOINT ["java", "-jar","/app/app.jar"]
